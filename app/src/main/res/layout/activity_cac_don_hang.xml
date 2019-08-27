@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".activy.CacDonHang">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarcacdonhang"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#41E4C3"
+        app:title="Các đơn hàng của bạn"
+        app:titleTextColor="#D56658"></androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/editcacdonghang"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:hint="Nhập tên của bạn:" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btntimkiem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="Tìm kiếm" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textviewcdh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chưa có đơn hàng nào"
+        android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/lvcacdonhang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>
