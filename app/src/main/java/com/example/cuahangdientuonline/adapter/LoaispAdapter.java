@@ -44,7 +44,10 @@ public class LoaispAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        
+        //cách 1
 //        ViewHolder viewHolder = null;
+        // nếu bỏ gán viewHolder = null thì phần command này chạy bình thường.
 //        if(view == null){
 //            viewHolder = new ViewHolder();
 //            LayoutInflater inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -63,6 +66,8 @@ public class LoaispAdapter extends BaseAdapter {
 //                    .into(viewHolder.imgLoaisp);
 //        }
 //        return view;
+        
+        //cách 2
         LayoutInflater inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.dong_listview_loaisp,null);
         TextView txtTenLoaisp = view.findViewById(R.id.textviewloaisp);
